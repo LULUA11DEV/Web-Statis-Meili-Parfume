@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meili Parfume - Promo Mengosongkan Stok Extrait De Parfum</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        garamond: ['Cormorant Garamond', 'serif']
+                    },
+                    colors: {
+                        meiliGold: '#D4AF37',
+                        meiliGoldDark: '#B8860B',
+                        meiliCream: '#FAF6F0',
+                        meiliDark: '#111111',
+                        meiliBorder: '#E5DDC8',
+                        creamLux: '#FAF6F0',
+                        darkLux: '#111111'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(250, 246, 240, 0.92);
+            backdrop-filter: blur(12px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-creamLux text-darkLux font-sans antialiased selection:bg-meiliGold selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div id="announcement-bar" class="bg-red-950 text-meiliCream text-xs tracking-widest py-2.5 px-4 text-center font-light flex items-center justify-center gap-3 border-b border-meiliGold/30">
+        <span><i class="fa-solid fa-fire text-amber-400 mr-1 animate-pulse"></i> <strong>PROMO CUCI GUDANG:</strong> Mengosongkan Stok All Variant Hanya <strong>Rp 35.000</strong>!</span>
+        <span class="hidden md:inline text-meiliGold">•</span>
+        <span class="hidden md:inline">Stok Sangat Terbatas — Siapa Cepat Dia Dapat!</span>
+        <button onclick="document.getElementById('announcement-bar').style.display='none'" class="ml-auto md:ml-4 text-gray-400 hover:text-white" aria-label="Tutup Peringatan">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-meiliBorder/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col items-start group">
+                <span class="font-serif text-2xl sm:text-3xl tracking-[0.25em] text-meiliDark font-bold group-hover:text-meiliGold transition">MEILI</span>
+                <span class="text-[9px] uppercase tracking-[0.4em] text-meiliGoldDark font-medium -mt-1">PARFUME</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-10 text-xs font-semibold uppercase tracking-[0.2em] text-gray-700">
+                <a href="#hero" class="hover:text-meiliGold transition">Beranda</a>
+                <a href="#koleksi" class="hover:text-meiliGold transition">Koleksi Promo</a>
+                <a href="#layering" class="hover:text-meiliGold transition">Scent Lab</a>
+                <a href="#keunggulan" class="hover:text-meiliGold transition">Keunggulan</a>
+                <a href="#testimoni" class="hover:text-meiliGold transition">Ulasan</a>
+            </nav>
+
+            <!-- Cart Trigger & Action Buttons -->
+            <div class="flex items-center gap-4">
+                <button onclick="openQuizModal()" class="hidden sm:flex items-center gap-2 border border-meiliGold/50 hover:border-meiliGold px-4 py-2 rounded-full text-xs font-semibold tracking-wider text-meiliDark hover:bg-meiliGold/10 transition">
+                    <i class="fa-solid fa-wand-magic-sparkles text-meiliGold"></i>
+                    <span>Quiz Aroma</span>
+                </button>
+
+                <button onclick="toggleCart()" class="relative bg-meiliDark text-white p-3 rounded-full hover:bg-meiliGold transition flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-bag-shopping text-sm"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Hero Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-700 text-xs uppercase tracking-[0.2em] font-bold">
+                    <i class="fa-solid fa-box-open text-xs"></i>
+                    <span>OBRAL CUCI GUDANG • MENGOSONGKAN STOK</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-tight text-meiliDark tracking-tight">
+                    Keanggunan Murni <br class="hidden sm:inline">
+                    <span class="italic font-garamond text-meiliGoldDark font-normal">Harga Cuci Gudang.</span>
+                </h1>
+
+                <p class="text-gray-600 font-light text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Kesempatan langka! Promo mengosongkan stok batch eksklusif <strong>Meili Parfume</strong>. Dapatkan kualitas Extrait De Parfum tahan <strong>16+ jam</strong> hanya <strong>Rp 35.000</strong> sebelum kehabisan!
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#koleksi" class="w-full sm:w-auto bg-red-700 text-white px-8 py-4 rounded text-xs uppercase tracking-[0.25em] font-semibold hover:bg-meiliDark transition duration-300 shadow-lg text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-bolt text-yellow-300"></i>
+                        <span>Serbu Stok Sekarang</span>
+                    </a>
+                    <button onclick="openQuizModal()" class="w-full sm:w-auto bg-white/80 border border-meiliGold/40 text-meiliDark px-8 py-4 rounded text-xs uppercase tracking-[0.25em] font-semibold hover:border-meiliGold hover:bg-meiliGold/10 transition duration-300 text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-sparkles text-meiliGold"></i>
+                        <span>Temukan Signature Scent</span>
+                    </button>
+                </div>
+
+                <!-- Trust Stats -->
+                <div class="pt-8 border-t border-meiliBorder/60 grid grid-cols-3 gap-4 text-center lg:text-left">
+                    <div>
+                        <div class="font-serif text-2xl font-bold text-meiliDark">100%</div>
+                        <div class="text-[11px] text-gray-500 uppercase tracking-wider">Extrait Parfum</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-2xl font-bold text-meiliDark">16+ Jam</div>
+                        <div class="text-[11px] text-gray-500 uppercase tracking-wider">Ketahanan Aroma</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-2xl font-bold text-red-600">Rp 35.000</div>
+                        <div class="text-[11px] text-gray-500 uppercase tracking-wider">Harga Promo</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Hero Showcase Image -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden border border-meiliGold/30 shadow-2xl bg-white p-3">
+                    <img src="https://fpmtadvpytkkktsboovr.supabase.co/storage/v1/object/public/Meili%20Parfume%20Project/smAea.jpg" 
+                         alt="Meili Parfume Bottle" class="w-full h-full object-cover rounded-xl hover:scale-105 transition duration-700">
+                    
+                    <div class="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-xl border border-white/20 text-white">
+                        <span class="text-[10px] text-meiliGold uppercase font-bold tracking-widest block">Clearance Highlight</span>
+                        <div class="flex justify-between items-center mt-1">
+                            <span class="font-serif text-lg font-medium">Rose Impériale (50ml)</span>
+                            <span class="text-xs bg-red-600 px-2 py-1 rounded font-bold">Rp 35.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Urgent Stock Warning Banner -->
+    <section class="bg-red-900 text-white py-4 border-y border-red-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-3">
+                <span class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
+                <p class="text-xs sm:text-sm font-medium tracking-wide">
+                    ⚠️ <strong>PERINGATAN STOK TERBATAS:</strong> Beberapa varian terfavorit tersisa kurang dari 15 botol!
+                </p>
+            </div>
+            <div class="inline-flex items-center gap-2 bg-black/30 px-4 py-1.5 rounded-full text-xs font-mono text-yellow-300 border border-yellow-300/30">
+                <i class="fa-solid fa-clock"></i>
+                <span>Promo Berakhir Setelah Stok Habis</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Brand Advantages -->
+    <section id="keunggulan" class="py-12 bg-white border-y border-meiliBorder/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-meiliCream/50 border border-meiliBorder/40">
+                <div class="w-12 h-12 rounded-full bg-meiliGold/20 flex items-center justify-center text-meiliGoldDark text-xl shrink-0">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-meiliDark">Garansi Asli</h4>
+                    <p class="text-xs text-gray-500 font-light">100% Produk Original Meili</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-meiliCream/50 border border-meiliBorder/40">
+                <div class="w-12 h-12 rounded-full bg-meiliGold/20 flex items-center justify-center text-meiliGoldDark text-xl shrink-0">
+                    <i class="fa-solid fa-clock text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-meiliDark">Tahan 16+ Jam</h4>
+                    <p class="text-xs text-gray-500 font-light">Extrait De Parfum Premium</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-meiliCream/50 border border-meiliBorder/40">
+                <div class="w-12 h-12 rounded-full bg-meiliGold/20 flex items-center justify-center text-meiliGoldDark text-xl shrink-0">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-meiliDark">Kirim Cepat</h4>
+                    <p class="text-xs text-gray-500 font-light">Pengiriman Aman Seluruh Indonesia</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-meiliCream/50 border border-meiliBorder/40">
+                <div class="w-12 h-12 rounded-full bg-meiliGold/20 flex items-center justify-center text-meiliGoldDark text-xl shrink-0">
+                    <i class="fa-solid fa-percent"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-meiliDark">Cuci Gudang</h4>
+                    <p class="text-xs text-gray-500 font-light">Diskon Pengosongan Stok</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection & Product Catalog -->
+    <section id="koleksi" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs uppercase tracking-[0.3em] text-red-600 font-bold"><i class="fa-solid fa-tags mr-1"></i> Stock Clearance Sale</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-meiliDark mt-2">Koleksi Cuci Gudang Rp 35.000</h2>
+            <div class="w-12 h-0.5 bg-meiliGold mx-auto my-4"></div>
+            <p class="text-gray-600 text-sm font-light">Semua varian Extrait De Parfum kualitas premium diskon besar-besaran untuk pengosongan gudang. Pilih keharuman favoritmu sebelum habis!</p>
+        </div>
+
+        <!-- Filter Tabs & Search Bar -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 border-b border-meiliBorder/60 pb-6">
+            <div class="flex flex-wrap items-center justify-center gap-2">
+                <button onclick="filterProducts('all')" id="tab-all" class="filter-btn active bg-meiliDark text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition">Semua</button>
+                <button onclick="filterProducts('Floral')" id="tab-Floral" class="filter-btn bg-white border border-meiliBorder text-gray-700 hover:border-meiliGold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition">Floral</button>
+                <button onclick="filterProducts('Woody')" id="tab-Woody" class="filter-btn bg-white border border-meiliBorder text-gray-700 hover:border-meiliGold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition">Woody</button>
+                <button onclick="filterProducts('Gourmand')" id="tab-Gourmand" class="filter-btn bg-white border border-meiliBorder text-gray-700 hover:border-meiliGold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition">Gourmand</button>
+                <button onclick="filterProducts('Fresh')" id="tab-Fresh" class="filter-btn bg-white border border-meiliBorder text-gray-700 hover:border-meiliGold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition">Fresh</button>
+            </div>
+
+            <!-- Search Field -->
+            <div class="relative w-full md:w-72">
+                <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Cari varian / aroma..." class="w-full bg-white border border-meiliBorder rounded-full py-2.5 pl-10 pr-4 text-xs focus:outline-none focus:border-meiliGold shadow-sm">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-gray-400 text-xs"></i>
+            </div>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Rendered by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Scent Layering Lab Section -->
+    <section id="layering" class="py-20 bg-meiliDark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs uppercase tracking-[0.3em] text-meiliGold font-bold">Inovasi Keharuman</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2">Scent Layering Lab</h2>
+                <p class="text-gray-400 text-sm font-light mt-4">Kombinasikan dua varian Meili Parfume untuk menciptakan aroma baru yang benar-benar personal dan unik bagi kepribadian Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white/5 border border-white/10 p-6 sm:p-10 rounded-3xl backdrop-blur-md">
+                
+                <!-- Selector 1 -->
+                <div class="lg:col-span-4 space-y-4">
+                    <label class="text-xs uppercase tracking-widest text-meiliGold block font-semibold">Pilih Base Scent (Aroma Dasar):</label>
+                    <select id="layer-base" onchange="updateLayerLab()" class="w-full bg-black/40 border border-white/20 rounded-xl p-3.5 text-sm text-white focus:outline-none focus:border-meiliGold">
+                        <option value="">-- Pilih Parfum Pertama --</option>
+                        <option value="p1">Rose Impériale (Floral)</option>
+                        <option value="p2">Midnight Amber (Woody)</option>
+                        <option value="p3">Vanilla Céleste (Gourmand)</option>
+                    </select>
+
+                    <label class="text-xs uppercase tracking-widest text-meiliGold block font-semibold pt-2">Pilih Top Layer (Aroma Pelapis):</label>
+                    <select id="layer-top" onchange="updateLayerLab()" class="w-full bg-black/40 border border-white/20 rounded-xl p-3.5 text-sm text-white focus:outline-none focus:border-meiliGold">
+                        <option value="">-- Pilih Parfum Kedua --</option>
+                        <option value="p4">Citrus Breeze (Fresh)</option>
+                        <option value="p5">Fleur de Jasmine (Floral)</option>
+                        <option value="p6">Santal Noble (Woody)</option>
+                    </select>
+                </div>
+
+                <!-- Combination Result Showcase -->
+                <div class="lg:col-span-8 bg-black/60 border border-meiliGold/30 p-6 sm:p-8 rounded-2xl space-y-4 text-center lg:text-left flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-[0.3em] bg-meiliGold/20 text-meiliGold px-3 py-1 rounded-full font-bold">Hasil Racikan Anda</span>
+                        <h3 id="layer-title" class="font-serif text-2xl sm:text-3xl text-white mt-3">Pilih 2 Parfum Di Samping</h3>
+                        <p id="layer-desc" class="text-gray-400 text-sm font-light mt-2 leading-relaxed">
+                            Pilih kombinasi varian favorit Anda untuk melihat prediksi karakter keharuman yang dihasilkan.
+                        </p>
+                    </div>
+
+                    <div id="layer-actions" class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 hidden">
+                        <div class="text-left">
+                            <span class="text-xs text-gray-400 block">Harga Paket Combo (2 Botol):</span>
+                            <span class="font-serif text-2xl font-bold text-meiliGold">Rp 70.000 <span class="text-xs text-gray-400 line-through">Rp 568.000</span></span>
+                        </div>
+                        <button onclick="addLayerBundleToCart()" class="bg-meiliGold text-meiliDark px-6 py-3 rounded-xl text-xs uppercase tracking-widest font-bold hover:bg-white transition shadow-lg">
+                            + Tambahkan Combo Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Ulasan Pelanggan -->
+    <section id="testimoni" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-[0.3em] text-meiliGoldDark font-bold">Ulasan Pembeli</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal mt-2 text-meiliDark">Apa Kata Mereka?</h2>
+            <div class="w-12 h-0.5 bg-meiliGold mx-auto my-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl border border-meiliBorder/60 shadow-sm space-y-4">
+                <div class="flex text-meiliGold text-sm gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                    "Kaget banget harganya Rp 35rb pas cuci gudang! Wangi Rose Impériale-nya beneran mewah dan tahan dari pagi sampe malam pas ngantor."
+                </p>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <div>
+                        <h4 class="font-semibold text-sm text-meiliDark">Siti Nurhaliza</h4>
+                        <span class="text-xs text-gray-400">Jakarta Selatan</span>
+                    </div>
+                    <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Verified Buyer</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-meiliBorder/60 shadow-sm space-y-4">
+                <div class="flex text-meiliGold text-sm gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                    "Midnight Amber mantep banget aroma kayunya. Pas dikombinasiin sama Santal Noble sesuai saran Scent Lab-nya jadi berkelas banget!"
+                </p>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <div>
+                        <h4 class="font-semibold text-sm text-meiliDark">Dimas Anggara</h4>
+                        <span class="text-xs text-gray-400">Bandung</span>
+                    </div>
+                    <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Verified Buyer</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-meiliBorder/60 shadow-sm space-y-4">
+                <div class="flex text-meiliGold text-sm gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                    "Beli 3 botol langsung dapet bonus sampel gratis. Vanillanya creamy banget dan nggak bikin pusing. Pokoknya recommended!"
+                </p>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <div>
+                        <h4 class="font-semibold text-sm text-meiliDark">Amanda Putri</h4>
+                        <span class="text-xs text-gray-400">Surabaya</span>
+                    </div>
+                    <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-over Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
+                
+                <!-- Drawer Header -->
+                <div class="p-6 border-b border-gray-100 flex items-center justify-between bg-meiliCream">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-meiliGoldDark"></i>
+                        <h3 class="font-serif text-xl font-bold text-meiliDark">Keranjang Belanja</h3>
+                    </div>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-meiliDark text-lg p-2" aria-label="Tutup Keranjang">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Items List -->
+                <div id="cart-items" class="p-6 flex-1 overflow-y-auto custom-scrollbar space-y-4">
+                    <!-- Dynamic Cart Items -->
+                </div>
+
+                <!-- Cart Footer & Checkout -->
+                <div class="p-6 border-t border-gray-100 bg-meiliCream/40 space-y-4">
+                    
+                    <!-- Free gift progress bar -->
+                    <div class="bg-white p-3 rounded-xl border border-meiliBorder/60 text-xs space-y-1.5">
+                        <div class="flex justify-between font-semibold text-meiliDark">
+                            <span>Bonus Sampel Gratis (Min. Rp 100.000)</span>
+                            <span id="bonus-status">Kurang Rp 100.000</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                            <div id="bonus-progress" class="h-full bg-meiliGold transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-gray-500 font-light">Subtotal Tagihan:</span>
+                        <span id="cart-subtotal" class="font-serif text-2xl font-bold text-meiliDark">Rp 0</span>
+                    </div>
+
+                    <button onclick="proceedToCheckout()" class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-bold text-xs uppercase tracking-[0.2em] transition duration-300 shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Order via WhatsApp Now</span>
+                    </button>
+
+                    <p class="text-[10px] text-center text-gray-400">
+                        Pemesanan diproses langsung oleh Admin WhatsApp Resmi Meili Parfume.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Fragrance Finder Quiz Modal -->
+    <div id="quiz-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl border border-meiliBorder flex flex-col max-h-[90vh]">
+            
+            <div class="p-6 bg-meiliDark text-white flex justify-between items-center">
+                <div>
+                    <span class="text-[10px] text-meiliGold uppercase tracking-widest font-bold">Scent Matcher</span>
+                    <h3 class="font-serif text-xl">Cari Signature Scent Anda</h3>
+                </div>
+                <button onclick="closeQuizModal()" class="text-gray-400 hover:text-white" aria-label="Tutup Kuis"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <div class="p-6 overflow-y-auto flex-1 space-y-6">
+                <!-- Question 1 -->
+                <div>
+                    <label class="text-xs uppercase font-bold text-meiliDark tracking-wider block mb-3">1. Suasana apa yang paling Anda sukai?</label>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <button onclick="selectQuizOption('vibe', 'romantic')" class="quiz-opt-vibe border p-3 rounded-xl text-left hover:border-meiliGold transition">🌸 Romantis & Anggun</button>
+                        <button onclick="selectQuizOption('vibe', 'bold')" class="quiz-opt-vibe border p-3 rounded-xl text-left hover:border-meiliGold transition">🪵 Karismatik & Hangat</button>
+                        <button onclick="selectQuizOption('vibe', 'sweet')" class="quiz-opt-vibe border p-3 rounded-xl text-left hover:border-meiliGold transition">🧁 Manis & Soft</button>
+                        <button onclick="selectQuizOption('vibe', 'fresh')" class="quiz-opt-vibe border p-3 rounded-xl text-left hover:border-meiliGold transition">🍋 Segar & Energetik</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div>
+                    <label class="text-xs uppercase font-bold text-meiliDark tracking-wider block mb-3">2. Kapan Anda paling sering memakai parfum?</label>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <button onclick="selectQuizOption('occasion', 'daily')" class="quiz-opt-occ border p-3 rounded-xl text-left hover:border-meiliGold transition">☀️ Aktivitas Harian</button>
+                        <button onclick="selectQuizOption('occasion', 'night')" class="quiz-opt-occ border p-3 rounded-xl text-left hover:border-meiliGold transition">🌙 Acara Malam / Pesta</button>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="hidden p-4 rounded-2xl bg-meiliCream border border-meiliGold/40 text-center space-y-3">
+                    <span class="text-[10px] uppercase font-bold text-meiliGoldDark">Rekomendasi Terbaik Untuk Anda:</span>
+                    <h4 id="quiz-recommendation-title" class="font-serif text-2xl font-bold text-meiliDark"></h4>
+                    <p id="quiz-recommendation-desc" class="text-xs text-gray-600"></p>
+                    <button id="quiz-add-btn" class="bg-red-700 text-white px-6 py-2.5 rounded-full text-xs uppercase font-bold tracking-widest shadow hover:bg-meiliDark transition">
+                        Tambahkan Ke Keranjang (Rp 35.000)
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+                <button onclick="finishQuiz()" class="bg-meiliDark text-white px-6 py-2.5 rounded-full text-xs uppercase font-bold tracking-widest hover:bg-meiliGold transition">
+                    Lihat Hasil
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickview-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl border border-meiliBorder relative flex flex-col md:flex-row">
+            <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 z-10 bg-white/80 p-2 rounded-full text-gray-500 hover:text-black shadow" aria-label="Tutup Pratinjau">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="qv-image-container" class="w-full md:w-1/2 h-64 md:h-auto bg-meiliCream overflow-hidden">
+                <img id="qv-image" src="" alt="Product" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+                <div>
+                    <span id="qv-category" class="text-xs uppercase text-meiliGoldDark font-bold tracking-widest"></span>
+                    <h3 id="qv-title" class="font-serif text-2xl font-bold text-meiliDark mt-1"></h3>
+                    <p id="qv-desc" class="text-xs text-gray-600 font-light mt-2 leading-relaxed"></p>
+                    
+                    <div class="mt-4 space-y-2 text-xs">
+                        <div class="flex justify-between"><span class="font-semibold text-gray-700">Top Notes:</span><span id="qv-top" class="text-gray-500"></span></div>
+                        <div class="flex justify-between"><span class="font-semibold text-gray-700">Heart Notes:</span><span id="qv-heart" class="text-gray-500"></span></div>
+                        <div class="flex justify-between"><span class="font-semibold text-gray-700">Base Notes:</span><span id="qv-base" class="text-gray-500"></span></div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-red-600 font-bold block">Harga Cuci Gudang</span>
+                        <span id="qv-price" class="font-serif text-2xl font-bold text-meiliDark"></span>
+                    </div>
+                    <button id="qv-add-btn" class="bg-red-700 text-white px-5 py-3 rounded-xl text-xs uppercase font-bold tracking-wider hover:bg-meiliDark transition">
+                        + Keranjang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="kontak" class="bg-meiliDark text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-meiliGold/20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-white/10 pb-12">
+            
+            <div class="space-y-4">
+                <span class="font-serif text-3xl font-bold tracking-[0.2em] text-meiliGold block">MEILI</span>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                    Extrait De Parfum kemewahan tanpa kompromi. Menghadirkan keharuman abadi yang tahan seharian.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <a href="https://www.instagram.com/meili.parfum?igsh=bm1qNzhydGpvMjc=" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-meiliGold hover:text-meiliDark transition" aria-label="Instagram Official">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6285778902802" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-600 transition" aria-label="WhatsApp Official">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-meiliGold mb-4">Navigasi Website</h4>
+                <ul class="space-y-2.5 text-xs text-gray-400 font-light">
+                    <li><a href="#hero" class="hover:text-white transition">Beranda</a></li>
+                    <li><a href="#koleksi" class="hover:text-white transition">Koleksi Cuci Gudang</a></li>
+                    <li><a href="#layering" class="hover:text-white transition">Scent Layering Lab</a></li>
+                    <li><a href="#keunggulan" class="hover:text-white transition">Keunggulan Brand</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-meiliGold mb-4">Layanan Pelanggan</h4>
+                <ul class="space-y-2.5 text-xs text-gray-400 font-light">
+                    <li><a href="https://wa.me/6285778902802" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Konsultasi Aroma WhatsApp</a></li>
+                    <li><span>Garansi Pengiriman Aman</span></li>
+                    <li><span>Panduan Penyimpanan Parfum</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-meiliGold mb-4">Kontak Official</h4>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-2">
+                    <i class="fa-brands fa-whatsapp text-green-500 mr-2"></i> +62 857-7890-2802
+                </p>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-4">
+                    <i class="fa-brands fa-instagram text-pink-500 mr-2"></i> @meili.parfum
+                </p>
+                <span class="text-[10px] text-gray-500 block">Operasional: Senin - Minggu (08:00 - 22:00 WIB)</span>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 font-light gap-4">
+            <p>&copy; 2026 Meili Parfume Official Store. All Rights Reserved.</p>
+            <p>Promo Mengosongkan Stok Batch Terbatas.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-meiliDark text-white px-5 py-3 rounded-2xl shadow-2xl border border-meiliGold/40 text-xs flex items-center gap-3 translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+        <span id="toast-message">Produk berhasil ditambahkan!</span>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        /* Asset Image URLs */
+        const imgProduct1 = 'https://fpmtadvpytkkktsboovr.supabase.co/storage/v1/object/public/Meili%20Parfume%20Project/smAea.jpg';
+        const imgProduct2 = 'https://fpmtadvpytkkktsboovr.supabase.co/storage/v1/object/public/Meili%20Parfume%20Project/Ik3EG.jpg';
+        const imgProduct3 = 'https://fpmtadvpytkkktsboovr.supabase.co/storage/v1/object/public/Meili%20Parfume%20Project/WhatsApp%20Image%202026-07-26%20at%207.55.35%20PM%20(1).jpeg';
+
+        /* Products Master Data */
+        const PRODUCTS = [
+            {
+                id: 'p1',
+                name: 'Meili - Rose Impériale',
+                category: 'Floral',
+                originalPrice: 289000,
+                price: 35000,
+                rating: 4.9,
+                reviewsCount: 142,
+                image: imgProduct1,
+                badge: 'Cuci Gudang Rp 35rb',
+                stockRemaining: 'Tersisa 9 botol',
+                topNotes: ['Bulgarian Rose', 'Pink Pepper', 'Bergamot'],
+                heartNotes: ['Turkish Damask Rose', 'Peony', 'Violet Leaf'],
+                baseNotes: ['Precious Amber', 'Velvet Vanilla', 'Soft Oud'],
+                description: 'Karya agung keharuman mawar Prancis murni yang berpadu sempurna dengan kehangatan ambar oriental dan sentuhan lembut vanila.',
+                vibe: 'Anggun, Sensual, Mewah'
+            },
+            {
+                id: 'p2',
+                name: 'Meili - Midnight Amber',
+                category: 'Woody',
+                originalPrice: 299000,
+                price: 35000,
+                rating: 4.8,
+                reviewsCount: 98,
+                image: imgProduct2,
+                badge: 'Hampir Habis',
+                stockRemaining: 'Tersisa 4 botol',
+                topNotes: ['Cardamom', 'Cinnamon Bark', 'Saffron'],
+                heartNotes: ['Rich Amber', 'Cedarwood', 'Patchouli'],
+                baseNotes: ['Mysore Sandalwood', 'Smokey Vanilla', 'Tonka Bean'],
+                description: 'Sensasi kehangatan aroma kayu cendana dan ambar mewah di tengah malam. Menggambarkan aura misterius dan karisma tinggi.',
+                vibe: 'Misterius, Karismatik, Hangat'
+            },
+            {
+                id: 'p3',
+                name: 'Meili - Vanilla Céleste',
+                category: 'Gourmand',
+                originalPrice: 279000,
+                price: 35000,
+                rating: 5.0,
+                reviewsCount: 185,
+                image: imgProduct3,
+                badge: 'Cuci Gudang Rp 35rb',
+                stockRemaining: 'Tersisa 12 botol',
+                topNotes: ['Bourbon Vanilla', 'Almond Blossom'],
+                heartNotes: ['Caramelised Sugar', 'Butter Orchid'],
+                baseNotes: ['Madagascar Vanilla Orchid', 'White Musk', 'Cashmere Wood'],
+                description: 'Aroma vanila mentega hangat bertingkat yang creamy tanpa rasa enek. Memberikan efek menenangkan dan manis memikat.',
+                vibe: 'Manis, Menenangkan, Creamy'
+            },
+            {
+                id: 'p4',
+                name: 'Meili - Citrus Breeze',
+                category: 'Fresh',
+                originalPrice: 249000,
+                price: 35000,
+                rating: 4.7,
+                reviewsCount: 76,
+                image: imgProduct1,
+                badge: 'Cuci Gudang Rp 35rb',
+                stockRemaining: 'Tersisa 15 botol',
+                topNotes: ['Calabrian Bergamot', 'Italian Lemon', 'Grapefruit'],
+                heartNotes: ['Sea Salt', 'Neroli', 'Green Tea'],
+                baseNotes: ['White Cedar', 'Ambroxan', 'Clean Musk'],
+                description: 'Sensasi kesegaran hembusan angin laut Mediterania berpadu dengan keharuman lemon Italia yang membangkitkan kebugaran.',
+                vibe: 'Fresh, Energetik, Bersih'
+            },
+            {
+                id: 'p5',
+                name: 'Meili - Fleur de Jasmine',
+                category: 'Floral',
+                originalPrice: 269000,
+                price: 35000,
+                rating: 4.8,
+                reviewsCount: 64,
+                image: imgProduct2,
+                badge: 'Hampir Habis',
+                stockRemaining: 'Tersisa 3 botol',
+                topNotes: ['Sambac Jasmine', 'White Peach'],
+                heartNotes: ['Tuberose', 'Ylang-Ylang'],
+                baseNotes: ['Sandalwood', 'White Amber'],
+                description: 'Kecantikan puspa melati melayang lembut dipadukan manisnya buah persik segar yang memesona dan feminin.',
+                vibe: 'Feminin, Menawan, Lembut'
+            },
+            {
+                id: 'p6',
+                name: 'Meili - Santal Noble',
+                category: 'Woody',
+                originalPrice: 309000,
+                price: 35000,
+                rating: 4.9,
+                reviewsCount: 110,
+                image: imgProduct3,
+                badge: 'Cuci Gudang Rp 35rb',
+                stockRemaining: 'Tersisa 7 botol',
+                topNotes: ['Violet Accord', 'Papyrus'],
+                heartNotes: ['Australian Sandalwood', 'Iris'],
+                baseNotes: ['Leather', 'Cedarwood', 'Musk'],
+                description: 'Kemewahan kayu cendana Australia yang diolah dengan akord iris dan kulit halus. Mewakili karakter tenang dan berkelas.',
+                vibe: 'Modern, Minimalis, Berkelas'
+            }
+        ];
+
+        /* State Variables */
+        let cart = [];
+        let quizAnswers = {};
+
+        function formatRupiah(amount) {
+            return 'Rp ' + amount.toLocaleString('id-ID');
+        }
+
+        /* Render Catalog Cards */
+        function renderProducts(productsToRender) {
+            const grid = document.getElementById('product-grid');
+            if (!grid) return;
+
+            if (productsToRender.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 text-center text-gray-500">
+                        <i class="fa-solid fa-spray-can-sparkles text-4xl text-meiliGold mb-3"></i>
+                        <p class="font-serif text-lg">Tidak ada produk yang cocok dengan pencarian ini.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = productsToRender.map(p => `
+                <div class="bg-white rounded-2xl border border-meiliBorder overflow-hidden shadow-sm hover:shadow-xl transition duration-500 flex flex-col group relative">
+                    <div class="relative h-72 overflow-hidden bg-meiliCream flex items-center justify-center">
+                        ${p.badge ? `<span class="absolute top-4 left-4 z-10 bg-red-800 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-red-400 shadow">${p.badge}</span>` : ''}
+                        
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <div class="absolute inset-0 bg-meiliDark/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-3">
+                            <button onclick="quickViewProduct('${p.id}')" class="bg-white text-meiliDark px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider shadow-lg hover:bg-meiliGold hover:text-meiliDark transition">
+                                <i class="fa-solid fa-eye mr-1"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-meiliGoldDark font-semibold uppercase tracking-wider">${p.category}</span>
+                                <span class="text-gray-400"><i class="fa-solid fa-star text-meiliGold text-xs mr-1"></i>${p.rating} (${p.reviewsCount})</span>
+                            </div>
+
+                            <h3 class="font-serif text-xl font-medium text-meiliDark group-hover:text-meiliGoldDark transition">${p.name}</h3>
+                            
+                            <div class="mt-1 text-[11px] font-semibold text-red-600 flex items-center gap-1">
+                                <i class="fa-solid fa-fire-flame-curved"></i>
+                                <span>${p.stockRemaining}</span>
+                            </div>
+
+                            <p class="text-xs text-gray-500 mt-2 line-clamp-2">
+                                <span class="font-medium text-gray-700">Aroma:</span> ${p.topNotes.join(', ')}
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-red-600 font-bold uppercase tracking-wider block">Cuci Gudang</span>
+                                <div class="flex items-baseline gap-1.5">
+                                    <span class="font-serif text-lg font-bold text-meiliDark">${formatRupiah(p.price)}</span>
+                                    <span class="text-xs text-gray-400 line-through">${formatRupiah(p.originalPrice)}</span>
+                                </div>
+                            </div>
+                            <button onclick="addToCart('${p.id}')" class="bg-red-700 text-white px-4 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider hover:bg-meiliDark transition duration-300 shadow">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-meiliDark', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700', 'border');
+            });
+            const activeBtn = document.getElementById('tab-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-700');
+                activeBtn.classList.add('bg-meiliDark', 'text-white');
+            }
+
+            if (category === 'all') {
+                renderProducts(PRODUCTS);
+            } else {
+                renderProducts(PRODUCTS.filter(p => p.category === category));
+            }
+        }
+
+        function searchProducts() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = PRODUCTS.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.category.toLowerCase().includes(query) ||
+                p.topNotes.some(n => n.toLowerCase().includes(query))
+            );
+            renderProducts(filtered);
+        }
+
+        function addToCart(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingIndex = cart.findIndex(item => item.id === productId);
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            renderCart();
+            openToast(`${product.name} ditambahkan ke keranjang!`);
+        }
+
+        function updateCartQuantity(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (!item) return;
+
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.id !== productId);
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items');
+            const countBadge = document.getElementById('cart-count');
+            const subtotalElem = document.getElementById('cart-subtotal');
+            const bonusStatus = document.getElementById('bonus-status');
+            const bonusProgress = document.getElementById('bonus-progress');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            if (countBadge) countBadge.innerText = totalItems;
+            if (subtotalElem) subtotalElem.innerText = formatRupiah(subtotal);
+
+            // Bonus calculation (Threshold Rp 100.000)
+            const bonusThreshold = 100000;
+            if (subtotal >= bonusThreshold) {
+                if (bonusStatus) bonusStatus.innerText = '🎉 Selamat! Bonus Sampel Gratis Didapatkan!';
+                if (bonusProgress) bonusProgress.style.width = '100%';
+            } else {
+                const diff = bonusThreshold - subtotal;
+                if (bonusStatus) bonusStatus.innerText = `Kurang ${formatRupiah(diff)} lagi`;
+                if (bonusProgress) bonusProgress.style.width = `${Math.min(100, (subtotal / bonusThreshold) * 100)}%`;
+            }
+
+            if (!container) return;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="py-12 text-center text-gray-400 space-y-3">
+                        <i class="fa-solid fa-basket-shopping text-4xl text-meiliGold/50"></i>
+                        <p class="font-serif text-base">Keranjang belanja Anda masih kosong.</p>
+                        <button onclick="toggleCart(); location.href='#koleksi'" class="text-xs uppercase tracking-wider text-meiliGoldDark font-bold hover:underline">
+                            Lihat Promo Cuci Gudang
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="flex items-center justify-between gap-4 p-3 rounded-xl border border-meiliBorder/60 bg-white shadow-sm">
+                    <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h4 class="font-serif text-sm font-semibold text-meiliDark line-clamp-1">${item.name}</h4>
+                        <span class="text-xs text-red-600 font-bold block">${formatRupiah(item.price)}</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-meiliCream px-2 py-1 rounded-lg border border-meiliBorder">
+                        <button onclick="updateCartQuantity('${item.id}', -1)" class="text-xs font-bold text-gray-600 hover:text-black w-5 h-5 flex items-center justify-center">-</button>
+                        <span class="text-xs font-semibold w-4 text-center">${item.quantity}</span>
+                        <button onclick="updateCartQuantity('${item.id}', 1)" class="text-xs font-bold text-gray-600 hover:text-black w-5 h-5 flex items-center justify-center">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer) drawer.classList.toggle('hidden');
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                openToast('Keranjang Anda masih kosong!');
+                return;
+            }
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            let message = `Halo Admin Meili Parfume,%0ASaya ingin memesan koleksi *PROMO CUCI GUDANG (Rp 35.000)* berikut:%0A%0A`;
+
+            cart.forEach((item, index) => {
+                message += `${index + 1}. *${item.name}* (${item.quantity}x) = ${formatRupiah(item.price * item.quantity)}%0A`;
+            });
+
+            message += `%0A*Total Tagihan:* ${formatRupiah(subtotal)}`;
+            if (subtotal >= 100000) {
+                message += `%0A*Bonus:* Free Exclusive Discovery Sample 3ml`;
+            }
+
+            message += `%0A%0AMohon bantuannya untuk pemrosesan order cuci gudang ini sebelum stok habis. Terima kasih!`;
+
+            window.open(`https://wa.me/6285778902802?text=${message}`, '_blank');
+        }
+
+        function quickViewProduct(productId) {
+            const p = PRODUCTS.find(item => item.id === productId);
+            if (!p) return;
+
+            document.getElementById('qv-image').src = p.image;
+            document.getElementById('qv-category').innerText = p.category;
+            document.getElementById('qv-title').innerText = p.name;
+            document.getElementById('qv-desc').innerText = p.description;
+            document.getElementById('qv-price').innerText = formatRupiah(p.price);
+            document.getElementById('qv-top').innerText = p.topNotes.join(', ');
+            document.getElementById('qv-heart').innerText = p.heartNotes.join(', ');
+            document.getElementById('qv-base').innerText = p.baseNotes.join(', ');
+
+            const addBtn = document.getElementById('qv-add-btn');
+            addBtn.onclick = function() {
+                addToCart(p.id);
+                closeQuickViewModal();
+            };
+
+            document.getElementById('quickview-modal').classList.remove('hidden');
+        }
+
+        function closeQuickViewModal() {
+            document.getElementById('quickview-modal').classList.add('hidden');
+        }
+
+        function openQuizModal() {
+            document.getElementById('quiz-modal').classList.remove('hidden');
+        }
+
+        function closeQuizModal() {
+            document.getElementById('quiz-modal').classList.add('hidden');
+        }
+
+        function selectQuizOption(key, val) {
+            quizAnswers[key] = val;
+            openToast(`Pilihan ${key} disimpan!`);
+        }
+
+        function finishQuiz() {
+            const resContainer = document.getElementById('quiz-result');
+            const titleElem = document.getElementById('quiz-recommendation-title');
+            const descElem = document.getElementById('quiz-recommendation-desc');
+            const addBtn = document.getElementById('quiz-add-btn');
+
+            let recommended = PRODUCTS[0];
+            if (quizAnswers.vibe === 'bold') recommended = PRODUCTS[1];
+            else if (quizAnswers.vibe === 'sweet') recommended = PRODUCTS[2];
+            else if (quizAnswers.vibe === 'fresh') recommended = PRODUCTS[3];
+
+            titleElem.innerText = recommended.name;
+            descElem.innerText = recommended.description;
+            addBtn.onclick = function() {
+                addToCart(recommended.id);
+                closeQuizModal();
+            };
+
+            resContainer.classList.remove('hidden');
+        }
+
+        function updateLayerLab() {
+            const baseId = document.getElementById('layer-base').value;
+            const topId = document.getElementById('layer-top').value;
+
+            const title = document.getElementById('layer-title');
+            const desc = document.getElementById('layer-desc');
+            const actions = document.getElementById('layer-actions');
+
+            if (!baseId || !topId) {
+                title.innerText = 'Pilih 2 Parfum Di Samping';
+                desc.innerText = 'Pilih kombinasi varian favorit Anda untuk melihat prediksi karakter keharuman yang dihasilkan.';
+                actions.classList.add('hidden');
+                return;
+            }
+
+            const baseP = PRODUCTS.find(p => p.id === baseId);
+            const topP = PRODUCTS.find(p => p.id === topId);
+
+            title.innerText = `Racikan: ${baseP.name.replace('Meili - ', '')} + ${topP.name.replace('Meili - ', '')}`;
+            desc.innerText = `Aroma dasar ${baseP.category} (${baseP.topNotes[0]}) yang dalam berpadu harmonis dengan kesegaran ${topP.category} (${topP.topNotes[0]}). Menghasilkan sillage luar biasa yang tahan hingga 18 jam.`;
+            actions.classList.remove('hidden');
+        }
+
+        function addLayerBundleToCart() {
+            const baseId = document.getElementById('layer-base').value;
+            const topId = document.getElementById('layer-top').value;
+
+            if (baseId) addToCart(baseId);
+            if (topId) addToCart(topId);
+
+            openToast('Paket Combo Scent Lab ditambahkan!');
+            toggleCart();
+        }
+
+        function openToast(message) {
+            const toast = document.getElementById('toast');
+            const msgElem = document.getElementById('toast-message');
+            if (!toast || !msgElem) return;
+
+            msgElem.innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts(PRODUCTS);
+            renderCart();
+        });
+    </script>
+</body>
+</html>
